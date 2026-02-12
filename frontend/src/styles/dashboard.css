@@ -1,0 +1,189 @@
+/* Dashboard wrapper */
+.dashboard {
+  background: transparent;
+}
+.secondar{
+  margin-left: 25px;
+}
+/* Top section card */
+.dashboard-top {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+/* Section title (like "Your Learning Journey") */
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.edit-profile-btn{
+     width: 10%  !important;
+     margin-left: 25px;
+}
+
+.gen-learning-btn{
+      width: 18% !important;
+}
+
+/* Workflow status text */
+.workflow-status {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* CTA button area */
+.dashboard-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+}
+
+/* Primary CTA */
+.dashboard-actions button {
+  padding: 12px 18px;
+  font-size: 14px;
+}
+
+/* Card layout below dashboard (future learning cards) */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Placeholder cards (until learning path loads) */
+.placeholder-card {
+  height: 160px;
+  border-radius: 16px;
+  background: linear-gradient(
+    110deg,
+    #f0f1f5 25%,
+    #e6e7eb 37%,
+    #f0f1f5 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+/* Desktop spacing polish */
+@media (min-width: 1024px) {
+  .dashboard-top {
+    padding: 32px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+/* ========================= */
+/* 📱 MOBILE DASHBOARD VIEW */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  /* Main wrapper */
+  .dashboard {
+    padding: 0;
+    gap: 12px;
+  }
+
+  /* Top card */
+  .dashboard-top {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Section title */
+  .section-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  /* Workflow status text */
+  .workflow-status {
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* CTA buttons area */
+  .dashboard-actions {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  /* Buttons full width */
+  .dashboard-actions button {
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  /* Learning cards grid → stacked */
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Placeholder cards smaller */
+  .placeholder-card {
+    height: 120px;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-top::after {
+    content: "";
+    display: block;
+    margin-top: 16px;
+    height: 1px;
+    background: #e5e7eb;
+  }
+
+  .dashboard-actions .secondary{
+     width: 56%;
+     margin-top: 25px;
+  }
+
+  .edit-profile-btn{
+     width: 35%  !important;
+  }
+
+
+  .workflow-status{
+    margin-top: 30px;
+  }
+}
+

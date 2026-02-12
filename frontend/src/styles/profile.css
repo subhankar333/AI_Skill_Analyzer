@@ -1,0 +1,30 @@
+.profile-wrapper {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0,0,0,.08);
+}
+
+.profile-wrapper input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+  .profile-section {
+    gap: 12px;
+  }
+
+  .profile-field label {
+    font-size: 12px;
+  }
+
+  .profile-field input {
+    padding: 10px;
+  }
+}

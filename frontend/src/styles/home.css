@@ -1,0 +1,80 @@
+/* ---------- Base Container ---------- */
+.home {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.home h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.home p {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* ---------- Grid ---------- */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+/* ---------- Action Cards (Buttons) ---------- */
+.home-grid button {
+  background: white;
+  border-radius: 14px;
+  padding: 18px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  border: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.home-grid button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* ---------- Disabled State ---------- */
+.home-grid button:disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ---------- Emoji spacing ---------- */
+.home-grid button span {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 768px) {
+  .home {
+    padding: 32px;
+  }
+
+  .home h2 {
+    font-size: 26px;
+  }
+
+  .home-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* ---------- Large Desktop ---------- */
+@media (min-width: 1024px) {
+  .home-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

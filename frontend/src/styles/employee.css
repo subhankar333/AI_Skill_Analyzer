@@ -1,0 +1,45 @@
+.employee-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.primary{
+  margin-top: 30px;
+  padding: 12px 20px;
+}
+.employee-card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-4px);
+}
+
+.employee-card p {
+  color: var(--text-muted);
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .employee-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .employee-card {
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .employee-card h4 {
+    font-size: 15px;
+  }
+}
+
+ 

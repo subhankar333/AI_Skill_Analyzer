@@ -1,0 +1,95 @@
+.admin-employee-detail {
+  max-width: 900px;
+  margin: 40px auto;
+  background: var(--card);
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Back button */
+.admin-employee-detail button {
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.admin-employee-detail button:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+.admin-employee-detail h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Info rows */
+.admin-employee-detail p {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #374151;
+}
+
+.admin-employee-detail p strong {
+  color: #111827;
+}
+
+/* Skills section */
+.admin-employee-detail h4 {
+  margin-top: 28px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Skill tags */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tags span {
+  background: #eef2ff;
+  color: var(--primary);
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Card hover polish */
+.admin-employee-detail {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-employee-detail:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .admin-employee-detail {
+    margin: 20px;
+    padding: 24px;
+  }
+
+  .admin-employee-detail h2 {
+    font-size: 20px;
+  }
+
+  .skill-tags {
+    gap: 8px;
+  }
+
+  .skill-tags span {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}

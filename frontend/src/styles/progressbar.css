@@ -1,0 +1,43 @@
+.progress-track {
+  height: 8px;
+  background: var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.4s ease;
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.progress-steps span {
+  color: var(--text-muted);
+}
+
+.progress-steps .done {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .progress-container {
+    overflow-x: auto;
+  }
+
+  .progress-step {
+    min-width: 120px;
+    font-size: 12px;
+  }
+
+  .progress-steps .done {
+    font-size: 12px;
+  }
+}

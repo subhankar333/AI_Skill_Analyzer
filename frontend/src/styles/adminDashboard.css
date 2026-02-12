@@ -1,0 +1,141 @@
+/* ===============================
+   Admin Dashboard Layout
+================================ */
+
+.admin-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.admin-dashboard h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.create-btn{
+   margin-left: 2rem;
+}
+
+/* ===============================
+   Top Action Bar
+================================ */
+
+.admin-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.admin-actions .primary {
+  padding: 12px 18px;
+  font-size: 14px;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.admin-actions .primary:hover {
+  background: #1e4fd8;
+}
+
+/* ===============================
+   Employee Grid
+================================ */
+
+.admin-employee-list {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ===============================
+   Employee Card
+================================ */
+
+.employee-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.employee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.employee-card h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.employee-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #374151;
+}
+
+.employee-card span {
+  margin-top: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2563eb;
+  background: #eef2ff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+/* ===============================
+   Empty State
+================================ */
+
+.admin-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ===============================
+   Responsive
+================================ */
+
+@media (max-width: 1024px) {
+  .admin-employee-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-dashboard {
+    padding: 20px 12px;
+  }
+
+  .admin-employee-list {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-dashboard h2 {
+    font-size: 20px;
+  }
+
+  .employee-card {
+    padding: 18px;
+  }
+}
