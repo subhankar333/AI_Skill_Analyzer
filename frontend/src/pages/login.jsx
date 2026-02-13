@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { loginSuccess } from "../store/AuthSlice";
+import { loginSuccess } from "../store/authSlice";
 import '../styles/login.css';
 
 const API = import.meta.env.VITE_API_URL;

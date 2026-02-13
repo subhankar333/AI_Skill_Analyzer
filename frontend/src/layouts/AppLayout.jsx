@@ -1,6 +1,6 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { logout } from "../store/AuthSlice";
+import { logout } from "../store/authSlice";
 import Header from "../components/Header";
 import "../styles/header.css";
 
