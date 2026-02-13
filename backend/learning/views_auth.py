@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework.permissions import AllowAny
 from django.contrib.auth.models import User
 from .models import UserProfile, Employee
 from .permissions import IsAdmin, IsAdminOrEmployee
@@ -27,7 +28,6 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
             token['employee_id'] = None
         
         return token
-
 
 class CustomTokenObtainPairView(TokenObtainPairView):
     """

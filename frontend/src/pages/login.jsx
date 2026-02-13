@@ -30,8 +30,11 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  const [loading, setLoading] = useState(false);
+
   const handleLogin = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       const res = await fetch(
@@ -45,6 +48,7 @@ export default function Login() {
 
       if (!res.ok) {
         throw new Error("Invalid credentials");
+        setLoading(false);
       }
 
       const data = await res.json();
@@ -78,6 +82,7 @@ export default function Login() {
     } catch (err) {
       console.error("Login error:", err);
       setError("Login failed. Check credentials.");
+      setLoading(false);
     }
   };
 
@@ -115,7 +120,7 @@ export default function Login() {
           </div>
 
           <button type="submit" className="login-btn">
-            Login
+            {loading ? "Login..." : "Login"}
           </button>
         </form>
         <p className="login-link">

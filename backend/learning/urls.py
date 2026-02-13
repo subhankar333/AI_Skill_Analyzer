@@ -2,6 +2,7 @@ from django.urls import path
 from rest_framework_simplejwt.views import TokenRefreshView
 from .views_auth import CustomTokenObtainPairView, current_user, register_user
 from .views import learner_dashboard, generate_learning_path, learner_workflow_status, start_assessment, submit_assessment, generate_assessment_questions, learner_progress_bar, start_learning_content, complete_learning_content,list_employees, create_employee, get_employee, get_learning_path,update_employee,list_employees_public,admin_analytics
+from rest_framework.permissions import IsAuthenticated, AllowAny
 
 urlpatterns = [
         path("learner/<int:employee_id>/dashboard/", learner_dashboard),
@@ -23,7 +24,7 @@ urlpatterns = [
 ] 
 
 urlpatterns += [
-    path("auth/login/", CustomTokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path("auth/login/", CustomTokenObtainPairView.as_view(permission_classes=[AllowAny]), name="token_obtain_pair"),
     path("auth/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("auth/me/", current_user, name="current_user"),
     path("auth/register/", register_user, name="register"),
