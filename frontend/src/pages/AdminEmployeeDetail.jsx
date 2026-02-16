@@ -29,7 +29,7 @@ export default function AdminEmployeeDetail() {
 
   return (
     <div className="admin-employee-detail">
-      <button onClick={() => navigate("/admin")}>
+      <button onClick={() => navigate("/admin/employees")}>
         ← Back
       </button>
 
